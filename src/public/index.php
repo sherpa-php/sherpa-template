@@ -31,3 +31,18 @@ if ($currentRoute === null)
 }
 
 $currentRoute->run();
+
+
+// DO NOT ADD CODE ABOVE THIS LINE
+
+$endTime = microtime(true);
+
+$loadingTime = $endTime
+    ? ($endTime - $startTime) / 1_000
+    : 0;
+
+
+if ($_ENV["ENABLE_TOOLBAR"])
+{
+    Toolbar::render(intval($loadingTime));
+}
