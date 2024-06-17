@@ -13,3 +13,7 @@ const ROOT = "../..";
 
 
 require_once ROOT . "/vendor/autoload.php";
+
+
+$env = Dotenv::createImmutable(ROOT);
+$env->load();
