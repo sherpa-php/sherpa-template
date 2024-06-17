@@ -20,3 +20,14 @@ $env->load();
 
 
 RouterLoader::prepareRoutesRepositories();
+
+
+$currentRoute = Router::getRouteByPath($_GET["route"]);
+
+if ($currentRoute === null)
+{
+    echo "404 Not Found";
+    die;
+}
+
+$currentRoute->run();
