@@ -1,5 +1,0 @@
-RewriteEngine On
-
-<FilesMatch "^\.env">
-    Require all denied
-</FilesMatch>
