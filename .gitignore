@@ -4,3 +4,5 @@ Dockerfile
 docker-compose.yml
 .dockerignore
 apache-config.conf
+composer.lock
+package.lock
