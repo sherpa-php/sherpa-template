@@ -44,5 +44,5 @@ $loadingTime = $endTime
 
 if ($_ENV["ENABLE_TOOLBAR"])
 {
-    Toolbar::render(intval($loadingTime));
+    Toolbar::render($currentRoute, intval($loadingTime));
 }
