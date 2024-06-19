@@ -1,8 +1,6 @@
 <?php
 
-namespace Sherpa\Template\routes\core;
-
-use Sherpa\Core\router\Route;
+namespace Sherpa\Template\core;
 
 class RouterLoader
 {
