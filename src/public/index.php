@@ -3,7 +3,7 @@
 use Dotenv\Dotenv;
 use Sherpa\Core\router\Router;
 use Sherpa\Core\utilities\toolbar\Toolbar;
-use Sherpa\Template\routes\core\RouterLoader;
+use Sherpa\Template\core\RouterLoader;
 
 $startTime = microtime(true);
 
