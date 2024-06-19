@@ -24,6 +24,7 @@ RouterLoader::prepareRoutesRepositories();
 
 $currentRoute = Router::getRouteByPath($_GET["route"]);
 
+// TODO: replace echo 404 by error page system
 if ($currentRoute === null)
 {
     echo "404 Not Found";
