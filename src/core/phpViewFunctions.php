@@ -13,6 +13,6 @@ function component(string $name, array $props = []): void
     {
         extract($props);
 
-        include "../views/components/$name.component.php";
+        include "../views/components/$name.view.php";
     }
 }
