@@ -12,7 +12,7 @@ class View
      */
     public static function isPhpViewExisting(string $viewName): bool
     {
-        $viewFilename = "$viewName.view.php";
+        $viewFilename = "$viewName{$_ENV['VIEW_FILE_EXTENSION']}";
         $viewsDirectoryScan = scandir("../views/");
 
         return in_array($viewFilename, $viewsDirectoryScan);
