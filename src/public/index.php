@@ -34,7 +34,7 @@ if ($currentRoute === null)
 $currentRoute->run();
 
 
-// DO NOT ADD CODE ABOVE THIS LINE
+// --> DO NOT ADD CODE ABOVE THIS LINE <-- //
 
 $endTime = microtime(true);
 
