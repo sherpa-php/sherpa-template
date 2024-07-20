@@ -1,13 +1,17 @@
 <?php
 
 use Dotenv\Dotenv;
+use Sherpa\Core\exceptions\ExceptionsManager;
 use Sherpa\Core\router\Router;
 use Sherpa\Core\utilities\toolbar\Toolbar;
 use Sherpa\Template\core\RouterLoader;
 
+
 $startTime = microtime(true);
 
+
 session_start();
+
 
 const ROOT = "../..";
 
@@ -17,6 +21,9 @@ require_once ROOT . "/vendor/autoload.php";
 
 $env = Dotenv::createImmutable(ROOT);
 $env->load();
+
+
+ExceptionsManager::useExceptionHandler();
 
 
 RouterLoader::prepareRoutesRepositories();
