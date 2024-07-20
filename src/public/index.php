@@ -30,15 +30,6 @@ include_once "../core/utility-functions.php";
 ExceptionsManager::useExceptionHandler();
 
 
-$database = DB::connect(
-    $_ENV["DB_DBMS"],
-    $_ENV["DB_HOST"],
-    $_ENV["DB_PORT"],
-    $_ENV["DB_DATABASE"],
-    $_ENV["DB_USER"],
-    $_ENV["DB_PASSWORD"]);
-
-
 RouterLoader::prepareRoutesRepositories();
 
 
