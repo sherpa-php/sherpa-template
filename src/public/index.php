@@ -24,6 +24,9 @@ $env = Dotenv::createImmutable(ROOT);
 $env->load();
 
 
+include_once "../core/utility-functions.php";
+
+
 ExceptionsManager::useExceptionHandler();
 
 
