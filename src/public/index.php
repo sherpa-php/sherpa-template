@@ -4,6 +4,7 @@ use Dotenv\Dotenv;
 use Sherpa\Core\csrf\CSRF;
 use Sherpa\Core\database\DB;
 use Sherpa\Core\exceptions\ExceptionsManager;
+use Sherpa\Core\middlewares\MiddlewareRegister;
 use Sherpa\Core\router\Router;
 use Sherpa\Core\utilities\toolbar\Toolbar;
 use Sherpa\Template\core\RouterLoader;
@@ -32,6 +33,10 @@ ExceptionsManager::useExceptionHandler();
 
 
 $csrf = CSRF::generate();
+
+
+MiddlewareRegister::getInstance()
+    ->register(require "../middlewares/register.php");
 
 
 RouterLoader::prepareRoutesRepositories();
