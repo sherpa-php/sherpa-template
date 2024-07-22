@@ -1,6 +1,7 @@
 <?php
 
 use Dotenv\Dotenv;
+use Sherpa\Core\csrf\CSRF;
 use Sherpa\Core\database\DB;
 use Sherpa\Core\exceptions\ExceptionsManager;
 use Sherpa\Core\router\Router;
@@ -28,6 +29,9 @@ include_once "../core/utility-functions.php";
 
 
 ExceptionsManager::useExceptionHandler();
+
+
+$csrf = CSRF::generate();
 
 
 RouterLoader::prepareRoutesRepositories();
